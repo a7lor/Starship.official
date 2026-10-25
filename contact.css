@@ -1,0 +1,132 @@
+/* =========================
+   CONTACTページ
+========================= */
+
+.contact-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 150px 30px 100px;
+}
+
+
+/* ページタイトル */
+
+.contact-page h1 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+/* コンテンツ */
+
+.contact-content {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* 説明文 */
+
+.contact-description {
+    font-size: 14px;
+    color: #555;
+
+    text-align: center;
+    line-height: 2;
+
+    margin-bottom: 60px;
+}
+
+
+/* お問い合わせ欄 */
+
+.contact-section {
+    width: 100%;
+
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    padding: 35px 20px;
+
+    text-align: center;
+}
+
+
+/* 小見出し */
+
+.contact-section h2 {
+    font-size: 17px;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+
+    margin-bottom: 25px;
+}
+
+
+/* お問い合わせ先 */
+
+.contact-text {
+    font-size: 14px;
+    color: #555;
+
+    margin-bottom: 15px;
+}
+
+
+/* メールアドレス */
+
+.contact-email {
+    font-size: 14px;
+    color: #111;
+
+    line-height: 2;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   スマートフォン
+========================= */
+
+@media screen and (max-width: 767px) {
+
+    .contact-page {
+        padding: 110px 20px 70px;
+    }
+
+    .contact-page h1 {
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+
+    .contact-description {
+        font-size: 13px;
+        margin-bottom: 40px;
+    }
+
+    .contact-section {
+        padding: 30px 15px;
+    }
+
+    .contact-section h2 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .contact-text {
+        font-size: 13px;
+    }
+
+    .contact-email {
+        font-size: 13px;
+    }
+
+}

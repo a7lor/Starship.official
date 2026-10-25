@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOODS | STARSHIP</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="goods.css">
+
+    <script src="index.js" defer></script>
+    <script src="goods.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header class="header">
+
+        <!-- ロゴ -->
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="STARSHIP">
+        </a>
+
+        <!-- ハンバーガーメニューボタン -->
+        <button class="menu-button" id="menuButton" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+ <!-- ハンバーガーメニュー -->
+    <nav class="menu" id="menu">
+
+        <button class="close-button" id="closeButton" aria-label="メニューを閉じる">
+            ×
+        </button>
+
+        <ul>
+            <li>
+                <a href="news.html">NEWS</a>
+            </li>
+
+            <li>
+                <a href="goods.html">GOODS</a>
+            </li>
+
+            <li>
+                <a href="album.html">CD/Blu-ray</a>
+            </li>
+
+            <li>
+                <a href="about.html">ABOUT</a>
+            </li>
+
+            <li>
+                <a href="contact.html">CONTACT</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <main class="goods-page">
+
+        <!-- 検索 -->
+        <div class="goods-search">
+            <span class="search-icon" aria-hidden="true"></span>
+            <input type="search" id="goodsSearch" placeholder="Search" aria-label="グッズを検索">
+        </div>
+
+        <!-- カテゴリ -->
+        <section class="goods-categories">
+            <h1>ITEM LINE UP</h1>
+
+            <div class="category-list">
+                <button class="category-button active" data-category="all">
+                    <span class="category-circle"></span>
+                    <span>ALL</span>
+                </button>
+
+                <button class="category-button" data-category="goods">
+                    <span class="category-circle"></span>
+                    <span>GOODS</span>
+                </button>
+
+                <button class="category-button" data-category="cd">
+                    <span class="category-circle"></span>
+                    <span>CD/DVD<br>・Blu-ray</span>
+                </button>
+
+                <button class="category-button" data-category="other">
+                    <span class="category-circle"></span>
+                    <span>その他</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- 絞り込み・並び替え -->
+        <section class="goods-controls">
+
+            <label>
+                <span>絞込み：</span>
+                <select id="stockFilter" aria-label="販売状況で絞り込む">
+                    <option value="all">すべて</option>
+                    <option value="available">販売中</option>
+                    <option value="soldout">SOLD OUT</option>
+                    <option value="presale">販売前</option>
+                </select>
+            </label>
+
+            <label>
+                <span>並び順：</span>
+                <select id="sortOrder" aria-label="商品を並び替える">
+                    <option value="newest">新着順</option>
+                    <option value="price-low">価格が安い順</option>
+                    <option value="price-high">価格が高い順</option>
+                    <option value="name">商品名順</option>
+                </select>
+            </label>
+
+            <p class="goods-count">
+                表示商品数 <span id="goodsCount">0</span>
+            </p>
+
+        </section>
+
+        <!-- 商品一覧 -->
+        <section class="goods-grid" id="goodsGrid" aria-label="商品一覧">
+
+            <!-- 商品1 -->
+            <article class="goods-card"
+                data-category="goods"
+                data-status="available"
+                data-price="4500"
+                data-name="TOUR T-shirt"
+                data-date="20261020">
+
+                <a href="#" class="goods-link">
+                    <div class="goods-image">
+                        <img src="images.html" alt="TOUR T-shirt">
+                    </div>
+                    <h2>TOUR T-shirt</h2>
+                    <p class="goods-price">¥4,500</p>
+                </a>
+                <span class="goods-status"></span>
+            </article>
+
+            <!-- 商品2 -->
+            <article class="goods-card"
+                data-category="goods"
+                data-status="presale"
+                data-price="2800"
+                data-name="LOGO T-shirt"
+                data-date="20261018">
+
+                <a href="#" class="goods-link">
+                    <div class="goods-image">
+                        <img src="images.html" alt="LOGO T-shirt">
+                    </div>
+                    <h2>LOGO T-shirt</h2>
+                    <p class="goods-price">¥2,800</p>
+                </a>
+                <span class="goods-status"></span>
+            </article>
+
+            <!-- 商品3 -->
+            <article class="goods-card"
+                data-category="goods"
+                data-status="soldout"
+                data-price="1800"
+                data-name="STARSHIP Towel"
+                data-date="20261015">
+
+                <a href="#" class="goods-link">
+                    <div class="goods-image">
+                        <img src="images.html" alt="STARSHIP Towel">
+                    </div>
+                    <h2>STARSHIP Towel</h2>
+                    <p class="goods-price">¥1,800</p>
+                </a>
+                <span class="goods-status"></span>
+            </article>
+
+            <!-- 商品4 -->
+            <article class="goods-card"
+                data-category="cd"
+                data-status="available"
+                data-price="3300"
+                data-name="NEW ALBUM"
+                data-date="20261010">
+
+                <a href="#" class="goods-link">
+                    <div class="goods-image">
+                        <img src="images.html" alt="NEW ALBUM">
+                    </div>
+                    <h2>NEW ALBUM</h2>
+                    <p class="goods-price">¥3,300</p>
+                </a>
+                <span class="goods-status"></span>
+            </article>
+
+            <!-- 商品5 -->
+            <article class="goods-card"
+                data-category="other"
+                data-status="available"
+                data-price="1200"
+                data-name="STICKER SET"
+                data-date="20261005">
+
+                <a href="#" class="goods-link">
+                    <div class="goods-image">
+                        <img src="images.html" alt="STICKER SET">
+                    </div>
+                    <h2>STICKER SET</h2>
+                    <p class="goods-price">¥1,200</p>
+                </a>
+                <span class="goods-status"></span>
+            </article>
+
+            <!-- 商品6 -->
+            <article class="goods-card"
+                data-category="goods"
+                data-status="available"
+                data-price="2200"
+                data-name="TOTE BAG"
+                data-date="20261001">
+
+                <a href="#" class="goods-link">
+                    <div class="goods-image">
+                        <img src="images.html" alt="TOTE BAG">
+                    </div>
+                    <h2>TOTE BAG</h2>
+                    <p class="goods-price">¥2,200</p>
+                </a>
+                <span class="goods-status"></span>
+            </article>
+
+        </section>
+
+        <p class="no-goods" id="noGoods" hidden>
+            該当する商品はありません。
+        </p>
+
+    </main>
+
+</body>
+</html>
