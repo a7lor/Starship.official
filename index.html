@@ -11,6 +11,9 @@
 
 <body>
 
+    <!-- CSSだけでメニューを開閉するためのスイッチ -->
+    <input type="checkbox" id="menuToggle" class="menu-toggle" aria-hidden="true">
+
     <!-- ヘッダー -->
     <header class="header">
 
@@ -20,11 +23,11 @@
         </a>
 
         <!-- ハンバーガーメニューボタン -->
-        <button class="menu-button" id="menuButton" aria-label="メニューを開く">
+        <label for="menuToggle" class="menu-button" id="menuButton" role="button" tabindex="0" aria-label="メニューを開く">
             <span></span>
             <span></span>
             <span></span>
-        </button>
+        </label>
 
     </header>
 
@@ -32,9 +35,9 @@
     <!-- ハンバーガーメニュー -->
     <nav class="menu" id="menu">
 
-        <button class="close-button" id="closeButton" aria-label="メニューを閉じる">
+        <label for="menuToggle" class="close-button" id="closeButton" role="button" tabindex="0" aria-label="メニューを閉じる">
             ×
-        </button>
+        </label>
 
         <ul>
             <li>
@@ -65,6 +68,24 @@
     <main>
 
         <section class="main-visual">
+
+            <!-- エンドレスで流れ続けるテキスト -->
+            <div class="marquee-banner" aria-hidden="true">
+                <div class="marquee-track">
+                    <div class="marquee-group">
+                        <span>このアーティストは実際には存在しません</span>
+                        <span>このアーティストは実際には存在しません</span>
+                        <span>このアーティストは実際には存在しません</span>
+                        <span>このアーティストは実際には存在しません</span>
+                    </div>
+                    <div class="marquee-group" aria-hidden="true">
+                        <span>このアーティストは実際には存在しません</span>
+                        <span>このアーティストは実際には存在しません</span>
+                        <span>このアーティストは実際には存在しません</span>
+                        <span>このアーティストは実際には存在しません</span>
+                    </div>
+                </div>
+            </div>
 
             <div class="slider" id="slider">
 
