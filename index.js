@@ -1,3 +1,13 @@
+function toggleMenu(open) {
+    const menu = document.getElementById("menu");
+    if (!menu) return;
+    if (open) {
+        menu.classList.add("active");
+    } else {
+        menu.classList.remove("active");
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const menuButton = document.getElementById("menuButton");
@@ -12,22 +22,22 @@ document.addEventListener("DOMContentLoaded", () => {
        ハンバーガーメニュー
     ========================= */
 
-    menuButton.addEventListener("click", () => {
-        menu.classList.add("active");
-    });
+    if (menuButton && menu) {
+        menuButton.addEventListener("click", () => {
+            toggleMenu(true);
+        });
+    }
 
-    closeButton.addEventListener("click", () => {
-        menu.classList.remove("active");
-    });
-
-
-    /* メニューのリンクを押したら閉じる */
+    if (closeButton && menu) {
+        closeButton.addEventListener("click", () => {
+            toggleMenu(false);
+        });
+    }
 
     const menuLinks = document.querySelectorAll(".menu a");
-
     menuLinks.forEach(link => {
         link.addEventListener("click", () => {
-            menu.classList.remove("active");
+            toggleMenu(false);
         });
     });
 
@@ -35,6 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
     /* =========================
        スライダー
     ========================= */
+
+    if (!slider || slides.length === 0) return;
 
     let currentIndex = 0;
     let timer;
